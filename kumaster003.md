@@ -3,14 +3,16 @@
 <pre>
 <code># Hostname Configuration</code>
 <code>[root@kumas003 /]# hostnamectl set-hostname kumas003</code>
+</pre>
 
-# OS
+<pre>
 <code>[root@kumas003 /]# cat /etc/centos-release</code>
 <code>CentOS Linux release 8.1.1911 (Core)</code>
+</pre>
 
-# Kernel 
+<pre>
 <code>[root@kumas003 /]# uname -a</code>
-<code>Linux unknown0800278382A0 4.18.0-147.3.1.el8_1.x86_64 #1 SMP Fri Jan 3 23:55:26 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code>
+<code>Linux kumas003 4.18.0-147.3.1.el8_1.x86_64 #1 SMP Fri Jan 3 23:55:26 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code>
 </pre>
 
 ## Network
@@ -48,6 +50,7 @@
 <pre>
 <code># ### Disable SELinux Service ###</code>
 <code>[root@kumas003 /]# sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config</code>
+<code>[root@kumas003 /]# reboot</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
 
@@ -81,4 +84,5 @@
 
 <code># ### Cockpit Service ###</code>
 <code>[root@kumas003 /]# systemctl enable --now cockpit.socket</code>
+<code># ### MISSING VALIDATION ###</code>
 </pre>
