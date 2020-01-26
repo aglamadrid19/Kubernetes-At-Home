@@ -2,9 +2,13 @@
 ## OS
 <pre>
 <code># Hostname Configuration
+<code>[root@kumas003 /]# hostnamectl set-hostname kumas003</code>
+
+# OS
 <code>[root@kumas003 /]# cat /etc/centos-release</code>
 <code>CentOS Linux release 8.1.1911 (Core)</code>
 
+# Kernel 
 <code>[root@kumas003 /]# uname -a</code>
 <code>Linux unknown0800278382A0 4.18.0-147.3.1.el8_1.x86_64 #1 SMP Fri Jan 3 23:55:26 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code>
 </pre>
