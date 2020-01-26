@@ -44,6 +44,13 @@
 <code>[root@kumas003 /]# nmcli con up enp0s3</code>
 </pre>
 
+## SELinux
+<pre>
+<code># ### Disable SELinux Service ###</code>
+<code>[root@kumas003 /]# sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+
 ## Firewall
 <pre>
 <code># ### Firewalld Service ###</code>
@@ -61,13 +68,17 @@
 <code>[root@kumas003 /]# firewall-cmd --set-default-zone=public</code>
 <code>[root@kumas003 /]# firewall-cmd --reload</code>
 
-<code># ### Allowed Services ###</code>
+<code># ### Default Allowed Services ###</code>
 <code>[root@kumas003 /]# firewall-cmd --list-service --zone=public</code>
 <code>cockpit dhcpv6-client ssh</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
 
 ## Cockpit
+<pre>
 <code># ### Install Cockpit ###</code>
-<code>[root@kumas003 /]# yum install -y cockpit
+<code>[root@kumas003 /]# yum install -y cockpit</code>
 
+<code># ### Cockpit Service ###</code>
+<code>[root@kumas003 /]# systemctl enable --now cockpit.socket</code>
+</pre>
