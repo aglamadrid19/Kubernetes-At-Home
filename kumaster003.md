@@ -27,7 +27,7 @@
 <code># ### MISSING VALIDATION ###</code>
 
 <code># ### Network Interface Configuration ###</code>
-<code># Configure enp0s3 static ip
+<code># Configure enp0s3 static ip</code>
 <code>[root@kumas003 /]# nmcli c mod enp0s3 ipv4.method manual ipv4.addr "192.168.1.13/24"</code>
 
 # Configure enp0s3 gateway
