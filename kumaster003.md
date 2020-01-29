@@ -22,7 +22,7 @@
 <code>[root@kumas003 /]# systemctl is-enabled NetworkManager</code>
 <code>enabled</code>
 
-<code>[root@kumas003 /]# systemctl is-active NetworkManager<code>
+<code>[root@kumas003 /]# systemctl is-active NetworkManager</code>
 <code>active</code>
 <code># ### MISSING VALIDATION ###</code>
 
