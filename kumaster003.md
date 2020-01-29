@@ -23,7 +23,7 @@
 <code>enabled</code>
 
 <code>[root@kumas003 /]# systemctl is-active NetworkManager<code>
-<code>active<code>
+<code>active</code>
 <code># ### MISSING VALIDATION ###</code>
 
 <code># ### Network Interface Configuration ###</code>
