@@ -86,3 +86,27 @@
 <code>[root@kumas003 /]# systemctl enable --now cockpit.socket</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
+
+## Kuburnetes Cluster Setup
+<pre>
+<code># ### Unique Requirements ###</code>
+<code># Unique MAC</code>
+<code>[root@kumas003 /]# ip link</code>
+<code># Unique Product-ID ###</code>
+<code>[root@kumas003 /]# cat /sys/class/dmi/id/product_uuid</code>
+</pre>
+
+<pre>
+<code># ### Global ETC Hostfile ###</code>
+<code># Backup original file</code>
+<code>[root@kumas003 /]# cp /etc/hosts /etc/old.hosts</code>
+<code># Global Hosts File Content</code>
+
+<code># Localhost
+<code>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</code>
+
+<code># Kubernetes Cluster Entries</code>
+<code>192.168.1.13 kumas003</code>
+<code>192.168.1.12 kunode002 kunode002-worker</code>
+<code>192.168.1.11 kunode001 kunode001-worker</code>
+</pre>
