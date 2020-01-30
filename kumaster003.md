@@ -22,12 +22,12 @@
 <code>[root@kumas003 /]# systemctl is-enabled NetworkManager</code>
 <code>enabled</code>
 
-<code>[root@kumas003 /]# systemctl is-active NetworkManager<code>
-<code>active<code>
+<code>[root@kumas003 /]# systemctl is-active NetworkManager</code>
+<code>active</code>
 <code># ### MISSING VALIDATION ###</code>
 
 <code># ### Network Interface Configuration ###</code>
-<code># Configure enp0s3 static ip
+<code># Configure enp0s3 static ip</code>
 <code>[root@kumas003 /]# nmcli c mod enp0s3 ipv4.method manual ipv4.addr "192.168.1.13/24"</code>
 
 # Configure enp0s3 gateway
