@@ -94,6 +94,7 @@
 <code>[root@kumas003 /]# ip link</code>
 <code># Unique Product-ID ###</code>
 <code>[root@kumas003 /]# cat /sys/class/dmi/id/product_uuid</code>
+<code># ### MISSING VALIDATION ###</code>
 </pre>
 
 <pre>
@@ -109,4 +110,7 @@
 <code>192.168.1.13 kumas003</code>
 <code>192.168.1.12 kunode002 kunode002-worker</code>
 <code>192.168.1.11 kunode001 kunode001-worker</code>
+<code># ### MISSING VALIDATION ###</code>
+
+
 </pre>
