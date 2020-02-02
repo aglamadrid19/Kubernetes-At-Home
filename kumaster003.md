@@ -23,7 +23,7 @@
 <code># ### MISSING VALIDATION ###</code>
 
 <code># ### Network Interface Configuration ###</code>
-<code># Configure enp0s3 static ip
+<code># Configure enp0s3 static ip</code>
 <code>[root@kumas003 /]# nmcli c mod enp0s3 ipv4.method manual ipv4.addr "192.168.1.13/24"</code>
 
 <code># Configure enp0s3 gateway</code>
@@ -82,3 +82,51 @@
 <code>[root@kumas003 /]# systemctl enable --now cockpit.socket</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
+
+## Kuburnetes Cluster Config Setup
+<pre>
+<code># ### Unique Requirements ###</code>
+<code># Unique MAC</code>
+<code>[root@kumas003 /]# ip link</code>
+<code># Unique Product-ID ###</code>
+<code>[root@kumas003 /]# cat /sys/class/dmi/id/product_uuid</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+
+<pre>
+<code># ### Global ETC Hostfile ###</code>
+<code># Backup original file</code>
+<code>[root@kumas003 /]# cp /etc/hosts /etc/old.hosts</code>
+<code># Global Hosts File Content</code>
+
+<code># Localhost
+<code>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</code>
+
+<code># Kubernetes Cluster Entries</code>
+<code>192.168.1.13 kumas003</code>
+<code>192.168.1.12 kunode002 kunode002-worker</code>
+<code>192.168.1.11 kunode001 kunode001-worker</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+
+## Docker-CE Installation
+<pre>
+<code># ### Docker-CE Installation ###</code>
+<code># Install require packages</code>
+<code>[root@kumas003 /]# sudo yum install -y yum-utils device-mapper-persistent-data lvm2</code>
+<code># Install Docker-CE ###</code>
+<code>[root@kumas003 /]# sudo yum install -y docker-ce --nobest</code>
+<code># Start Docker at boot</code>
+<code>[root@kumas003 /]# systemctl enable --now docker</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+<pre>
+<code># ### Docker-CE User Permissions ###</code>
+<code># Add Management-User to docker group</code>
+<code>[root@kumas003 /]# usermod -aG docker alamadrid</code>
+<code># Verify changes</code>
+<code>[root@kumas003 /]# id alamadrid</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+
+
