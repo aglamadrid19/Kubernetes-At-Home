@@ -3,14 +3,10 @@
 <pre>
 <code># Hostname Configuration</code>
 <code>[root@kumas003 /]# hostnamectl set-hostname kumas003</code>
-</pre>
 
-<pre>
 <code>[root@kumas003 /]# cat /etc/centos-release</code>
 <code>CentOS Linux release 8.1.1911 (Core)</code>
-</pre>
 
-<pre>
 <code>[root@kumas003 /]# uname -a</code>
 <code>Linux kumas003 4.18.0-147.3.1.el8_1.x86_64 #1 SMP Fri Jan 3 23:55:26 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code>
 </pre>
@@ -22,15 +18,15 @@
 <code>[root@kumas003 /]# systemctl is-enabled NetworkManager</code>
 <code>enabled</code>
 
-<code>[root@kumas003 /]# systemctl is-active NetworkManager<code>
-<code>active<code>
+<code>[root@kumas003 /]# systemctl is-active NetworkManager</code>
+<code>active</code>
 <code># ### MISSING VALIDATION ###</code>
 
 <code># ### Network Interface Configuration ###</code>
 <code># Configure enp0s3 static ip
 <code>[root@kumas003 /]# nmcli c mod enp0s3 ipv4.method manual ipv4.addr "192.168.1.13/24"</code>
 
-# Configure enp0s3 gateway
+<code># Configure enp0s3 gateway</code>
 <code>[root@kumas003 /]# nmcli c mod enp0s3 ipv4.gateway "192.168.1.254"</code>
 
 <code># Configure DNS Primary and Secondary</code>
