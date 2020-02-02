@@ -87,7 +87,7 @@
 <code># ### MISSING VALIDATION ###</code>
 </pre>
 
-## Kuburnetes Cluster Setup
+## Kuburnetes Cluster Config Setup
 <pre>
 <code># ### Unique Requirements ###</code>
 <code># Unique MAC</code>
@@ -111,6 +111,26 @@
 <code>192.168.1.12 kunode002 kunode002-worker</code>
 <code>192.168.1.11 kunode001 kunode001-worker</code>
 <code># ### MISSING VALIDATION ###</code>
-
-
 </pre>
+
+## Docker-CE Installation
+<pre>
+<code># ### Docker-CE Installation ###</code>
+<code># Install require packages</code>
+<code>[root@kumas003 /]# sudo yum install -y yum-utils device-mapper-persistent-data lvm2</code>
+<code># Install Docker-CE ###</code>
+<code>[root@kumas003 /]# sudo yum install -y docker-ce --nobest</code>
+<code># Start Docker at boot</code>
+<code>[root@kumas003 /]# systemctl enable --now docker</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+<pre>
+<code># ### Docker-CE User Permissions ###</code>
+<code># Add Management-User to docker group</code>
+<code>[root@kumas003 /]# usermod -aG docker alamadrid</code>
+<code># Verify changes</code>
+<code>[root@kumas003 /]# id alamadrid</code>
+<code># ### MISSING VALIDATION ###</code>
+</pre>
+
+
