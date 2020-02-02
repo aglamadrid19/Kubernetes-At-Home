@@ -99,7 +99,7 @@
 <code>[root@kumas003 /]# cp /etc/hosts /etc/old.hosts</code>
 <code># Global Hosts File Content</code>
 
-<code># Localhost
+<code># Localhost</code>
 <code>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</code>
 
 <code># Kubernetes Cluster Entries</code>
