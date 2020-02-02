@@ -120,6 +120,7 @@
 <code>[root@kumas003 /]# systemctl enable --now docker</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
+
 <pre>
 <code># ### Docker-CE User Permissions ###</code>
 <code># Add Management-User to docker group</code>
@@ -136,6 +137,7 @@
 <code>[root@kumas003 /]# systemctl disable firewalld</code>
 <code># ### MISSING VALIDATION ###</code>
 </pre>
+
 ## Install Kubernetes (Kubeadm)
 <pre>
 <code># ### Install Kubernetes (Kubeadm) ###</code>
@@ -151,7 +153,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 EOF</code>
 <code># ### MISSING VALIDATION ###</code>
 <code># Add yum repository</code>
-<code>[root@kumas003 /]# install kubeadm -y
+<code>[root@kumas003 /]# install kubeadm -y</code>
 </pre>
 
 
